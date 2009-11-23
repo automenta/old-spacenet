@@ -1,0 +1,462 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///devel/WWW/People/Berners-Lee/card.n3-->
+
+
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:cert="http://www.w3.org/ns/auth/cert#"
+    xmlns:con="http://www.w3.org/2000/10/swap/pim/contact#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:doap="http://usefulinc.com/ns/doap#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rsa="http://www.w3.org/ns/auth/rsa#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="../../2002/01/tr-automation/tr.rdf">
+        <dc:title>W3C Standards and Technical Reports</dc:title>
+    </rdf:Description>
+
+    <PersonalProfileDocument rdf:about="">
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/"/>
+        <dc:title>Tim Berners-Lee's FOAF file</dc:title>
+        <maker rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+        <primaryTopic rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </PersonalProfileDocument>
+
+    <Person rdf:about="#cm">
+        <s:seeAlso rdf:resource="http://www.koalie.net/foaf.rdf"/>
+        <mbox rdf:resource="mailto:coralie@w3.org"/>
+        <name>Coralie Mercier</name>
+    </Person>
+
+    <Person rdf:about="#dj">
+        <s:seeAlso rdf:resource="http://www.grorg.org/dean/foaf.rdf"/>
+        <homepage rdf:resource="http://www.grorg.org/dean/"/>
+        <mbox rdf:resource="mailto:dean@w3.org"/>
+        <mbox rdf:resource="mailto:dino@grorg.org"/>
+        <mbox_sha1sum>6de4ff27ef927b9ba21ccc88257e41a2d7e7d293</mbox_sha1sum>
+        <name>Dean Jackson</name>
+    </Person>
+
+    <Person rdf:about="#edd">
+        <s:seeAlso rdf:resource="http://heddley.com/edd/foaf.rdf"/>
+        <homepage rdf:resource="http://heddley.com/edd/"/>
+        <mbox rdf:resource="mailto:edd@usefulinc.com"/>
+        <mbox rdf:resource="mailto:edd@xml.com"/>
+        <mbox rdf:resource="mailto:edd@xmlhack.com"/>
+        <name>Edd Dumbill</name>
+        <nick>edd</nick>
+    </Person>
+
+    <rdf:Description rdf:about="http://bblfish.net/people/henry/card#me">
+        <name>Henry Story</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://dbpedia.org/resource/Eli_Lilly_and_Company">
+        <member rdf:nodeID="b1"/>
+    </rdf:Description>
+
+    <Person rdf:about="http://dbpedia.org/resource/John_Gage">
+        <img rdf:resource="http://upload.wikimedia.org/wikipedia/commons/d/de/John_Gage.jpg"/>
+        <name>John Gage</name>
+    </Person>
+
+    <Person rdf:about="http://dbpedia.org/resource/John_Klensin">
+        <name>John Klensin</name>
+    </Person>
+
+    <Person rdf:about="http://dbpedia.org/resource/John_Markoff">
+        <name>John Markoff</name>
+    </Person>
+
+    <Person rdf:about="http://dbpedia.org/resource/John_Seely_Brown">
+        <owl:sameAs rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/John+Seely+Brown"/>
+        <homepage rdf:resource="http://www.johnseelybrown.com/"/>
+        <img rdf:resource="http://transliteracies.english.ucsb.edu/images/participants/t/brown-john-seely-2.jpg"/>
+        <name>John Seely Brown</name>
+    </Person>
+
+    <Person rdf:about="http://dbpedia.org/resource/Tim_Bray">
+        <name>Tim Bray</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/2005/ajar/ajaw/data#Tabulator">
+        <doap:developer rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/2007/01/camp/data#course">
+        <maker rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/2007/wiki/people/JoeLambda#JL">
+        <firstName>Joe</firstName>
+        <name>Joe Lambda</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://dig.csail.mit.edu/2007/wiki/people/RobertHoffmann#RMH">
+        <name>Robert Hoffmann</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/People/RRS">
+        <img rdf:resource="http://www.w3.org/2006/09/Ralph_Swick.jpg"/>
+        <name>Ralph R. Swick</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/People/yosi#YES">
+        <name>Yosi Scharf</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/breadcrumbs/blog/4">
+        <dc:title>timbl's blog</dc:title>
+        <s:seeAlso rdf:resource="http://dig.csail.mit.edu/breadcrumbs/blog/feed/4"/>
+        <maker rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://dig.csail.mit.edu/data#DIG">
+        <member rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://eikeon.com/foaf.rdf#eikeon">
+        <name>Daniel Krech</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://hometown.aol.com/chbussler/foaf/chbussler.foaf#me">
+        <name>Christoph Bussler</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://id.ecs.soton.ac.uk/person/1269">
+        <name>Nicholas Gibbins</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://id.ecs.soton.ac.uk/person/1650">
+        <name>Wendy Hall</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://id.ecs.soton.ac.uk/person/2686">
+        <name>Nigel Shadbolt</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://id.ecs.soton.ac.uk/person/60">
+        <name>Les Carr</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://inamidst.com/sbp/foaf#Sean">
+        <name>Sean Palmer</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://my.opera.com/chaals/xml/foaf#me">
+        <name>Charles McCathieNevile</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://my.opera.com/danbri/xml/foaf#me">
+        <s:seeAlso rdf:resource="http://danbri.livejournal.com/data/foaf"/>
+        <owl:sameAs rdf:resource="http://danbri.org/foaf.rdf#danbri"/>
+        <owl:sameAs rdf:resource="http://www4.wiwiss.fu-berlin.de/dblp/resource/person/336851"/>
+        <mbox_sha1sum>70c053d15de49ff03a1bcc374e4119b40798a66e</mbox_sha1sum>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://my.opera.com/howcome/xml/foaf#howcome">
+        <name>Håkon Wium Lie</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://myopenlink.net/dataspace/person/kidehen#this">
+        <name>Kingsley Idehen</name>
+    </Person>
+
+    <Person rdf:about="http://norman.walsh.name/knows/who#norman-walsh">
+        <name>Norman Walsh</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://people.apache.org/~oshani/foaf.rdf#me">
+        <name>Oshani Seneviratne</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://people.csail.mit.edu/lkagal/foaf.rdf#me">
+        <mbox rdf:resource="mailto:lalana@csail.mit.edu"/>
+        <name>Lalana Kagal</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://people.csail.mit.edu/psz/foaf.rdf#me">
+        <name>Peter Szolovits</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://people.w3.org/simon/foaf#i">
+        <name>Simon J. Hernandez</name>
+    </Person>
+
+    <Person rdf:about="http://qdos.com/people/tom.xrdf#me">
+        <name>Tom Ilube</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://research.microsoft.com/~henrikn/foaf.xml#me">
+        <name>Henrik Nielsen</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://rit.mellon.org/Members/ihf/foaf.rdf#me">
+        <homepage rdf:resource="http://www.mellon.org/about_foundation/staff/program-area-staff/irafuchs"/>
+        <img rdf:resource="http://www.sun.com/products-n-solutions/edu/images/jelc/fuchs.jpg"/>
+        <name>Ira Fuchs</name>
+    </Person>
+
+    <Person rdf:about="http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me">
+        <img rdf:resource="http://swordfish.rdfweb.org/~libby/libby.jpg"/>
+        <mbox rdf:resource="mailto:libby.miller@bristol.ac.uk"/>
+        <name>Libby Miller</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://teole.jfouffa.org/People/Teole/card.rdf#me">
+        <name>Philippe Le Hégaret</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/mc/mcfoaf.rdf#me">
+        <name>mc schraefel</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://web.mit.edu/shinnyih/foaf.rdf#">
+        <name>Shinnyih Huang</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://wiki.ontoworld.org/index.php/_IRW2006">
+        <dc:title>Identity, Reference and the Web workshop 2006</dc:title>
+        <con:participant rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <Person rdf:about="http://www.aaronsw.com/about.xrdf#aaronsw">
+        <s:seeAlso rdf:resource="http://www.aaronsw.com/about.xrdf"/>
+        <mbox rdf:resource="mailto:me@aaronsw.com"/>
+        <name>Aaron Swartz</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://www.cambridgesemantics.com/people/lee">
+        <name>Lee Feigenbaum</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.cs.umd.edu/~hendler/2003/foaf.rdf#jhendler">
+        <name>Jim Hendler</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://www.dajobe.org/foaf.rdf#i">
+        <mbox rdf:resource="mailto:dave@dajobe.org"/>
+        <name>Dave Beckett</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://www.ecs.soton.ac.uk/~dt2/dlstuff/www2006_data#panel-panelk01">
+        <s:label>The Next Wave of the Web (Plenary Panel)</s:label>
+        <con:participant rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <Person rdf:about="http://www.isi.edu/~gil/foaf.rdf#me">
+        <name>Yolanda Gill</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://www.ivan-herman.net/foaf.rdf#me">
+        <mbox_sha1sum>5ac8032d5f6012aa1775ea2f63e1676bafd5e80b</mbox_sha1sum>
+        <mbox_sha1sum>c21b7ed00d78a35efcd8e567f8fd9cca71058c5</mbox_sha1sum>
+        <mbox_sha1sum>eccd01ba8ce2391a439e9b052a9fbf37eae9f732</mbox_sha1sum>
+        <name>Ivan Herman</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.kjetil.kjernsmo.net/foaf#me">
+        <name>Kjetil Kjernsmo</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.lassila.org/ora.rdf#me">
+        <name>Ora Lassila</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mindswap.org/2004/owl/mindswappers#Bijan.Parsia">
+        <name>Bijan Parsia</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mindswap.org/2004/owl/mindswappers#Jennifer.Golbeck">
+        <name>Jennifer Golbeck</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/10/swap/data#Cwm">
+        <doap:developer rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+    </rdf:Description>
+
+    <Person rdf:about="http://www.w3.org/People/Berners-Lee/card#amy">
+        <s:label>Amy van der Hiel</s:label>
+        <s:seeAlso rdf:resource="http://people.w3.org/amy/foaf.rdf"/>
+        <con:familyName>van der Hiel</con:familyName>
+        <con:givenName>Amy</con:givenName>
+        <mbox rdf:resource="mailto:amy@w3.org"/>
+        <mbox_sha1sum>1839a1cc2e719a85ea7d9007f587b2899cd94064</mbox_sha1sum>
+        <name>Amy van der Hiel</name>
+    </Person>
+
+    <con:Male rdf:about="http://www.w3.org/People/Berners-Lee/card#i">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <s:label>Tim Berners-Lee</s:label>
+        <con:assistant rdf:resource="http://www.w3.org/People/Berners-Lee/card#amy"/>
+        <con:homePage rdf:resource="./"/>
+        <con:office rdf:parseType="Resource">
+            <con:address rdf:parseType="Resource">
+                <con:city>Cambridge</con:city>
+                <con:country>USA</con:country>
+                <con:postalCode>02139</con:postalCode>
+                <con:street>32 Vassar Street</con:street>
+                <con:street2>MIT CSAIL Room 32-G524</con:street2>
+            </con:address>
+            <con:phone rdf:resource="tel:+1-617-253-5702"/>
+            <geo:lat>42.361860</geo:lat>
+            <geo:long>-71.091840</geo:long>
+        </con:office>
+        <con:publicHomePage rdf:resource="./"/>
+        <owl:sameAs rdf:resource="http://identi.ca/user/45563"/>
+        <owl:sameAs rdf:resource="http://www.advogato.org/person/timbl/foaf.rdf#me"/>
+        <owl:sameAs rdf:resource="http://www4.wiwiss.fu-berlin.de/bookmashup/persons/Tim+Berners-Lee"/>
+        <owl:sameAs rdf:resource="http://www4.wiwiss.fu-berlin.de/dblp/resource/person/100007"/>
+        <based_near rdf:parseType="Resource">
+            <geo:lat>42.361860</geo:lat>
+            <geo:long>-71.091840</geo:long>
+        </based_near>
+        <family_name>Berners-Lee</family_name>
+        <givenname>Timothy</givenname>
+        <homepage rdf:resource="http://www.w3.org/People/Berners-Lee/"/>
+        <img rdf:resource="http://www.w3.org/Press/Stock/Berners-Lee/2001-europaeum-eighth.jpg"/>
+        <knows rdf:resource="#cm"/>
+        <knows rdf:resource="#dj"/>
+        <knows rdf:resource="#edd"/>
+        <knows rdf:resource="http://bblfish.net/people/henry/card#me"/>
+        <knows rdf:resource="http://danbri.org/foaf.rdf#danbri"/>
+        <knows rdf:resource="http://dbpedia.org/resource/John_Gage"/>
+        <knows rdf:resource="http://dbpedia.org/resource/John_Klensin"/>
+        <knows rdf:resource="http://dbpedia.org/resource/John_Markoff"/>
+        <knows rdf:resource="http://dbpedia.org/resource/John_Seely_Brown"/>
+        <knows rdf:resource="http://dbpedia.org/resource/Tim_Bray"/>
+        <knows rdf:resource="http://dig.csail.mit.edu/2007/wiki/people/JoeLambda#JL"/>
+        <knows rdf:resource="http://dig.csail.mit.edu/2007/wiki/people/RobertHoffmann#RMH"/>
+        <knows rdf:resource="http://dig.csail.mit.edu/People/RRS"/>
+        <knows rdf:resource="http://dig.csail.mit.edu/People/yosi#YES"/>
+        <knows rdf:resource="http://eikeon.com/foaf.rdf#eikeon"/>
+        <knows rdf:resource="http://heddley.com/edd/foaf.rdf#edd"/>
+        <knows rdf:resource="http://hometown.aol.com/chbussler/foaf/chbussler.foaf#me"/>
+        <knows rdf:resource="http://id.ecs.soton.ac.uk/person/1269"/>
+        <knows rdf:resource="http://id.ecs.soton.ac.uk/person/1650"/>
+        <knows rdf:resource="http://id.ecs.soton.ac.uk/person/2686"/>
+        <knows rdf:resource="http://id.ecs.soton.ac.uk/person/60"/>
+        <knows rdf:resource="http://inamidst.com/sbp/foaf#Sean"/>
+        <knows rdf:resource="http://my.opera.com/chaals/xml/foaf#me"/>
+        <knows rdf:resource="http://my.opera.com/howcome/xml/foaf#howcome"/>
+        <knows rdf:resource="http://myopenlink.net/dataspace/person/kidehen#this"/>
+        <knows rdf:resource="http://norman.walsh.name/knows/who#norman-walsh"/>
+        <knows rdf:resource="http://people.apache.org/~oshani/foaf.rdf#me"/>
+        <knows rdf:resource="http://people.csail.mit.edu/crowell/foaf.rdf#crowell"/>
+        <knows rdf:resource="http://people.csail.mit.edu/lkagal/foaf#me"/>
+        <knows rdf:resource="http://people.csail.mit.edu/lkagal/foaf.rdf#me"/>
+        <knows rdf:resource="http://people.csail.mit.edu/psz/foaf.rdf#me"/>
+        <knows rdf:resource="http://people.csail.mit.edu/ryanlee/about#ryanlee"/>
+        <knows rdf:resource="http://people.w3.org/simon/foaf#i"/>
+        <knows rdf:resource="http://presbrey.mit.edu/foaf.rdf#presbrey"/>
+        <knows rdf:resource="http://qdos.com/people/tom.xrdf#me"/>
+        <knows rdf:resource="http://research.microsoft.com/~henrikn/foaf.xml#me"/>
+        <knows rdf:resource="http://rit.mellon.org/Members/ihf/foaf.rdf#me"/>
+        <knows rdf:resource="http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me"/>
+        <knows rdf:resource="http://teole.jfouffa.org/People/Teole/card.rdf#me"/>
+        <knows rdf:resource="http://users.ecs.soton.ac.uk/mc/mcfoaf.rdf#me"/>
+        <knows rdf:resource="http://web.mit.edu/ruthdhan/www/foaf.rdf#ruthdhan"/>
+        <knows rdf:resource="http://web.mit.edu/shinnyih/foaf.rdf#"/>
+        <knows rdf:resource="http://www.aaronsw.com/about.xrdf#aaronsw"/>
+        <knows rdf:resource="http://www.cambridgesemantics.com/people/lee"/>
+        <knows rdf:resource="http://www.cs.umd.edu/~hendler/2003/foaf.rdf#jhendler"/>
+        <knows rdf:resource="http://www.dajobe.org/foaf.rdf#i"/>
+        <knows rdf:resource="http://www.isi.edu/~gil/foaf.rdf#me"/>
+        <knows rdf:resource="http://www.ivan-herman.net/foaf.rdf#me"/>
+        <knows rdf:resource="http://www.kjetil.kjernsmo.net/foaf#me"/>
+        <knows rdf:resource="http://www.lassila.org/ora.rdf#me"/>
+        <knows rdf:resource="http://www.mindswap.org/2004/owl/mindswappers#Bijan.Parsia"/>
+        <knows rdf:resource="http://www.mindswap.org/2004/owl/mindswappers#Jennifer.Golbeck"/>
+        <knows rdf:resource="http://www.w3.org/People/Berners-Lee/card#amy"/>
+        <knows rdf:resource="http://www.w3.org/People/Connolly/#me"/>
+        <knows rdf:resource="http://www.w3.org/People/EM/contact#me"/>
+        <knows rdf:resource="http://www.w3.org/People/Jacobs/contact.rdf#IanJacobs"/>
+        <knows rdf:resource="http://www.w3.org/People/djweitzner/foaf#DJW"/>
+        <knows rdf:resource="http://www.w3.org/People/karl/karl-foaf.xrdf#me"/>
+        <knows rdf:nodeID="b1"/>
+        <knows rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <s:seeAlso rdf:resource="http://dannyayers.com/me.rdf"/>
+            <mbox_sha1sum>669fe353dbef63d12ba11f69ace8acbec1ac8b17</mbox_sha1sum>
+            <name>Danny Ayers</name>
+        </knows>
+        <mbox rdf:resource="mailto:timbl@w3.org"/>
+        <mbox_sha1sum>965c47c5a70db7407210cef6e4e6f5374a525c5c</mbox_sha1sum>
+        <name>Timothy Berners-Lee</name>
+        <nick>TimBL</nick>
+        <nick>timbl</nick>
+        <openid rdf:resource="http://www.w3.org/People/Berners-Lee/"/>
+        <phone rdf:resource="tel:+1-(617)-253-5702"/>
+        <preferredURI>http://www.w3.org/People/Berners-Lee/card#i</preferredURI>
+        <title>Sir</title>
+        <weblog rdf:resource="http://dig.csail.mit.edu/breadcrumbs/blog/4"/>
+        <workplaceHomepage rdf:resource="http://www.w3.org/"/>
+    </con:Male>
+
+    <Person rdf:about="http://www.w3.org/People/Connolly/#me">
+        <s:seeAlso rdf:resource="http://www.w3.org/People/Connolly/home-smart.rdf"/>
+        <mbox rdf:resource="mailto:connolly@w3.org"/>
+        <name>Dan Connolly</name>
+        <nick>DanCon</nick>
+    </Person>
+
+    <Person rdf:about="http://www.w3.org/People/EM/contact#me">
+        <s:seeAlso rdf:resource="http://www.w3.org/People/EM/contact"/>
+        <homepage rdf:resource="http://purl.org/net/eric/"/>
+        <img rdf:resource="http://www.ilrt.bristol.ac.uk/people/cmdjb/events/dc7/orig/eric.png"/>
+        <img rdf:resource="http://www.oclc.org/~emiller/capture.jpg"/>
+        <mbox rdf:resource="mailto:em@w3.org"/>
+        <name>Eric Miller</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://www.w3.org/People/Jacobs/contact.rdf#IanJacobs">
+        <name>Ian Jacobs</name>
+    </rdf:Description>
+
+    <Person rdf:about="http://www.w3.org/People/djweitzner/foaf#DJW">
+        <mbox_sha1sum>032c319f439f63efba54f4fa51bfb3a3fafedfbe</mbox_sha1sum>
+        <name>Daniel J Weitzner</name>
+    </Person>
+
+    <rdf:Description rdf:about="http://www.w3.org/People/karl/karl-foaf.xrdf#me">
+        <s:seeAlso rdf:resource="http://www.w3.org/People/karl/karl-foaf.xrdf"/>
+        <mbox rdf:resource="mailto:karl@w3.org"/>
+        <name>Karl Dubost</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/data#W3C">
+        <s:label>W3C</s:label>
+        <s:seeAlso rdf:resource="../../2002/01/tr-automation/tr.rdf"/>
+        <con:publicHomePage rdf:resource="http://www.w3.org/"/>
+        <homepage rdf:resource="../../"/>
+        <logo rdf:resource="../../Icons/w3c_home"/>
+        <member rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+        <name>World Wide Web Consortium</name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www4.wiwiss.fu-berlin.de/booksMeshup/books/006251587X">
+        <dc:creator rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+        <dc:title>Weaving the Web: The Original Design and Ultimate Destiny of the World Wide Web</dc:title>
+    </rdf:Description>
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/ns/auth/rsa#RSAPublicKey"/>
+        <cert:identity rdf:resource="http://www.w3.org/People/Berners-Lee/card#i"/>
+        <rsa:modulus rdf:parseType="Resource">
+            <cert:hex>84554e39b67f5e3912068773655d855d222fa2c05cd9784693f8919aa46a61be703069c5f3266eebc21d6bb429ee47fac347b012eb7da8b1e4b02f7680e39767b0086f1fd48b9a420de3e70df9c2504c87006e7722ab6df210dec768dae454e65b31752379d7032dd2269646562593d8b5c621860a0f929ad64b9dce1d6cb12f</cert:hex>
+        </rsa:modulus>
+        <rsa:public_exponent rdf:parseType="Resource">
+            <cert:decimal>65537</cert:decimal>
+        </rsa:public_exponent>
+    </rdf:Description>
+
+    <rdf:Description rdf:nodeID="b1">
+        <mbox rdf:resource="mailto:susie.stephens@gmail.com"/>
+        <name>Susie Stephens</name>
+    </rdf:Description>
+</rdf:RDF>

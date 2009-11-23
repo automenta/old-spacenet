@@ -1,0 +1,4 @@
+<element attribute="value">
+	<childElement/>
+	cdata
+</element>

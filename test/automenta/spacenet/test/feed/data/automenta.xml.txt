@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="http://automenta.com/frontpage" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Automenta</title>
+    <link>http://automenta.com/frontpage</link>
+    <description></description>
+    <language>en</language>
+          <item>
+    <title>Force Directed Net Layout 1</title>
+    <link>http://automenta.com/node/71</link>
+    <description>&lt;a href=&quot;/node/71&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/j6.thumbnail.png&quot; alt=&quot;Force Directed Net Layout 1&quot; title=&quot;Force Directed Net Layout 1&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;68&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/71#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Mon, 13 Jul 2009 20:13:18 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">71 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Gradient Shader</title>
+    <link>http://automenta.com/node/70</link>
+    <description>&lt;a href=&quot;/node/70&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/j5.thumbnail.png&quot; alt=&quot;Gradient Shader&quot; title=&quot;Gradient Shader&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;68&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/70#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Wed, 08 Jul 2009 02:09:26 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">70 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Object MetaWindows 3</title>
+    <link>http://automenta.com/node/69</link>
+    <description>&lt;a href=&quot;/node/69&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/j4.thumbnail.jpg&quot; alt=&quot;Object MetaWindows 3&quot; title=&quot;Object MetaWindows 3&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;68&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/69#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Mon, 06 Jul 2009 19:07:17 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">69 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Object MetaWindows 2</title>
+    <link>http://automenta.com/node/68</link>
+    <description>&lt;a href=&quot;/node/68&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/j2.thumbnail.png&quot; alt=&quot;Object MetaWindows 2&quot; title=&quot;Object MetaWindows 2&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;67&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/68#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Thu, 02 Jul 2009 15:38:01 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">68 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Object MetaWindows 1</title>
+    <link>http://automenta.com/node/67</link>
+    <description>&lt;a href=&quot;/node/67&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/j1.thumbnail.png&quot; alt=&quot;Object MetaWindows 1&quot; title=&quot;Object MetaWindows 1&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;68&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/67#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Tue, 23 Jun 2009 19:14:52 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">67 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Components Page</title>
+    <link>http://automenta.com/node/65</link>
+    <description>&lt;p&gt;Added a page for the open-source components upon which SpaceNet depends:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://automenta.com/image/tid/13&quot;&gt;SpaceNet Components&lt;/a&gt;&lt;/p&gt;
+</description>
+     <comments>http://automenta.com/node/65#comments</comments>
+ <pubDate>Thu, 18 Jun 2009 17:29:24 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">65 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Swing MetaWindow 1</title>
+    <link>http://automenta.com/node/52</link>
+    <description>&lt;a href=&quot;/node/52&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/st1.thumbnail.png&quot; alt=&quot;Swing MetaWindow 1&quot; title=&quot;Swing MetaWindow 1&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;75&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/52#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Wed, 17 Jun 2009 20:11:15 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">52 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Face Widgets</title>
+    <link>http://automenta.com/node/51</link>
+    <description>&lt;a href=&quot;/node/51&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/n1.thumbnail.png&quot; alt=&quot;Face Widgets&quot; title=&quot;Face Widgets&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;59&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/51#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Tue, 16 Jun 2009 19:59:18 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">51 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Window Space 2</title>
+    <link>http://automenta.com/node/50</link>
+    <description>&lt;a href=&quot;/node/50&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/t3.thumbnail.png&quot; alt=&quot;Window Space 2&quot; title=&quot;Window Space 2&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;80&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/50#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Wed, 03 Jun 2009 19:14:38 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">50 at http://automenta.com</guid>
+  </item>
+  <item>
+    <title>Window Space</title>
+    <link>http://automenta.com/node/49</link>
+    <description>&lt;a href=&quot;/node/49&quot;&gt;&lt;img src=&quot;http://automenta.com/sites/default/files/images/t2.thumbnail.png&quot; alt=&quot;Window Space&quot; title=&quot;Window Space&quot;  class=&quot;image image-thumbnail &quot; width=&quot;100&quot; height=&quot;68&quot; /&gt;&lt;/a&gt;</description>
+     <comments>http://automenta.com/node/49#comments</comments>
+ <category domain="http://automenta.com/taxonomy/term/11">Screenshots 0.5</category>
+ <pubDate>Wed, 03 Jun 2009 16:16:06 +0000</pubDate>
+ <dc:creator>seh</dc:creator>
+ <guid isPermaLink="false">49 at http://automenta.com</guid>
+  </item>
+  </channel>
+</rss>
