@@ -9,15 +9,24 @@ import org.neuroph.core.Neuron;
 
 public class NeuralDiGraph extends DiGraph<Neuron, Connection> {
 
-    private final NeuralNetwork net;
+    private NeuralNetwork net;
 
-    public NeuralDiGraph(NeuralNetwork net) {
+    public NeuralDiGraph() {
         super();
-        this.net = net;
-        refresh();
     }
 
-    protected void refresh() {
+    public NeuralDiGraph(NeuralNetwork net) {
+        this();
+        setNetwork(net);
+    }
+
+    public NeuralNetwork getNet() {
+        return net;
+    }
+
+    protected void setNetwork(NeuralNetwork net) {
+        this.net = net;
+        
         clear();
         Iterator<Layer> li = net.getLayersIterator();
         while (li.hasNext()) {
