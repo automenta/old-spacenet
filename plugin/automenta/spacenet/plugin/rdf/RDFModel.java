@@ -1,22 +1,8 @@
 package automenta.spacenet.plugin.rdf;
 
 
-import java.io.StringWriter;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.collections15.IteratorUtils;
-import org.apache.log4j.Logger;
-
-import automenta.spacenet.Disposable;
-
-
 /** basic interface to OpenRDF sesame graphs */
-abstract public class RDFModel<N extends RDFNode, L extends RDFLink> implements Disposable {
+abstract public class RDFModel {
 
 //	private static final Logger logger = Logger.getLogger(RDFNet.class);
 //	protected SailRepository rep;

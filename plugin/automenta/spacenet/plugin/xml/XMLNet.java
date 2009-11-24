@@ -1,13 +1,8 @@
 package automenta.spacenet.plugin.xml;
 
 
-
-
-import automenta.spacenet.var.net.memory.MemoryNet;
-
-
 /** net containing XML data.  interfaces to Javolution SAX reader */
-public class XMLNet extends MemoryNet<XMLNode,XMLLink> {
+public class XMLNet  {
 //	private static final Logger logger = Logger.getLogger(XMLNet.class);
 //	private automenta.spacenet.var.net.Node rootNode;
 //

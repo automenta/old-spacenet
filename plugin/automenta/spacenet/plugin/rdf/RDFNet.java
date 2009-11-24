@@ -1,19 +1,7 @@
 package automenta.spacenet.plugin.rdf;
 
-import java.lang.reflect.Array;
-import java.net.URL;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 
-import org.apache.commons.collections15.BidiMap;
-import org.apache.commons.collections15.bidimap.DualHashBidiMap;
-import org.apache.log4j.Logger;
 
-import automenta.spacenet.var.list.ListVar;
-import automenta.spacenet.var.net.Link;
-import automenta.spacenet.var.net.Net;
-import automenta.spacenet.var.net.Node;
 
 public class RDFNet {
 

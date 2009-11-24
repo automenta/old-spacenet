@@ -10,7 +10,6 @@ public class AllTests {
 				"Test for automenta.spacenet.space.test");
 		//$JUnit-BEGIN$
 		//suite.addTestSuite(TestRDFNet.class);
-		suite.addTestSuite(TestNet.class);
 		suite.addTestSuite(TestXMLNet.class);
 		//suite.addTestSuite(TestRDFEntity.class);
 		suite.addTestSuite(TestNode.class);

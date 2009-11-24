@@ -14,18 +14,14 @@ import automenta.spacenet.act.ActionIndex;
 import automenta.spacenet.act.PossibleAction;
 import automenta.spacenet.os.Linker;
 import automenta.spacenet.space.Space;
-import automenta.spacenet.space.dynamic.collection.ArrangeColumn;
 import automenta.spacenet.space.geom2.Rect;
 import automenta.spacenet.space.geom3.Box;
-import automenta.spacenet.space.object.RectBuilder;
 import automenta.spacenet.space.object.data.ListRect;
 import automenta.spacenet.space.object.text.TextRect;
 import automenta.spacenet.space.object.widget.button.Button;
 import automenta.spacenet.space.object.widget.button.ButtonAction;
 import automenta.spacenet.space.object.widget.button.IconButton;
-import automenta.spacenet.space.object.widget.button.TextButton;
 import automenta.spacenet.var.list.ListVar;
-import automenta.spacenet.var.number.IntegerVar;
 
 /** panel that represents an object, with buttons for adjusting views and selecting actions applicable to a certain object */
 public class ObjectPanel<I> extends Box implements Starts {
@@ -155,78 +151,78 @@ public class ObjectPanel<I> extends Box implements Starts {
 	}
 	
 	PossibleAction<I, Space> getDefaultView() {
-		ListVar<PossibleAction<I, Space>> l = getViews().getPossibleActions(getObject());
-		if (l.size() > 0) {
-			return l.get(0);
-		}
+//		ListVar<PossibleAction<I, Space>> l = getViews().getPossibleActions(getObject());
+//		if (l.size() > 0) {
+//			return l.get(0);
+//		}
 		return null;
 	}
 
 	
 	protected void toggleViews() {
-		if (viewListWindow == null) {
-			ListVar<PossibleAction<I, Space>> l = getViews().getPossibleActions(getObject());
-			viewList = new ListRect(l, new ArrangeColumn(0,0), new IntegerVar(6), new RectBuilder<PossibleAction>() {
-				@Override public Rect newRect(final PossibleAction y) {
-					Rect r = new Rect();
-					r.tangible(false);
-					TextButton button = r.add(new TextButton(y.getName()));
-					
-					button.addButtonAction(new ButtonAction() {
-						@Override public void onButtonPressed(Button b) {
-							setView(y);
-						}												
-					});
-
-					return r;
-				}				
-			});
-			//viewList.scale(0.9);
-			viewListWindow = add(new MetaWindow("Views"));
-			viewListWindow.span(-0.5,-0.25,-0.8,0.25);
-			viewListWindow.rotate(0, Math.PI/4, 0);
-			viewListWindow.getContent().add(viewList);
-		}
-		else {
-			remove(viewListWindow);
-			viewListWindow = null;
-		}
+//		if (viewListWindow == null) {
+//			ListVar<PossibleAction<I, Space>> l = getViews().getPossibleActions(getObject());
+//			viewList = new ListRect(l, new ArrangeColumn(0,0), new IntegerVar(6), new RectBuilder<PossibleAction>() {
+//				@Override public Rect newRect(final PossibleAction y) {
+//					Rect r = new Rect();
+//					r.tangible(false);
+//					TextButton button = r.add(new TextButton(y.getName()));
+//
+//					button.addButtonAction(new ButtonAction() {
+//						@Override public void onButtonPressed(Button b) {
+//							setView(y);
+//						}
+//					});
+//
+//					return r;
+//				}
+//			});
+//			//viewList.scale(0.9);
+//			viewListWindow = add(new MetaWindow("Views"));
+//			viewListWindow.span(-0.5,-0.25,-0.8,0.25);
+//			viewListWindow.rotate(0, Math.PI/4, 0);
+//			viewListWindow.getContent().add(viewList);
+//		}
+//		else {
+//			remove(viewListWindow);
+//			viewListWindow = null;
+//		}
 	}
 
 	public void toggleActions() {
-		if (actionsListWindow == null) {
-			ListVar<PossibleAction<I,Object>> l = getActions().getPossibleActions(getObject());
-			actionsList = new ListRect(l, new ArrangeColumn(0,0), new IntegerVar(6), new RectBuilder<PossibleAction>() {
-				@Override public Rect newRect(final PossibleAction y) {
-					Rect r = new Rect();
-					r.tangible(false);
-					TextButton button = r.add(new TextButton(y.getName()));
-					
-					button.addButtonAction(new ButtonAction() {
-						@Override public void onButtonPressed(Button b) {						
-							try {
-								y.run();
-								Object output = y.getOutputValue();								
-								setObject((I)output);
-							} catch (Exception e) {
-								logger.error(e);
-								e.printStackTrace();
-							}							
-						}												
-					});
-
-					return r;
-				}				
-			});
-			//actionsList.scale(0.9);
-			actionsListWindow = add(new MetaWindow("Actions"));
-			actionsListWindow.span(0.5,-0.25,0.8,0.25);
-			actionsListWindow.getContent().add(actionsList);
-		}
-		else {
-			remove(actionsListWindow);
-			actionsListWindow = null;
-		}
+//		if (actionsListWindow == null) {
+//			ListVar<PossibleAction<I,Object>> l = getActions().getPossibleActions(getObject());
+//			actionsList = new ListRect(l, new ArrangeColumn(0,0), new IntegerVar(6), new RectBuilder<PossibleAction>() {
+//				@Override public Rect newRect(final PossibleAction y) {
+//					Rect r = new Rect();
+//					r.tangible(false);
+//					TextButton button = r.add(new TextButton(y.getName()));
+//
+//					button.addButtonAction(new ButtonAction() {
+//						@Override public void onButtonPressed(Button b) {
+//							try {
+//								y.run();
+//								Object output = y.getOutputValue();
+//								setObject((I)output);
+//							} catch (Exception e) {
+//								logger.error(e);
+//								e.printStackTrace();
+//							}
+//						}
+//					});
+//
+//					return r;
+//				}
+//			});
+//			//actionsList.scale(0.9);
+//			actionsListWindow = add(new MetaWindow("Actions"));
+//			actionsListWindow.span(0.5,-0.25,0.8,0.25);
+//			actionsListWindow.getContent().add(actionsList);
+//		}
+//		else {
+//			remove(actionsListWindow);
+//			actionsListWindow = null;
+//		}
 	}
 
 	public void setObject(I newObject) {
