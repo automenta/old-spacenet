@@ -23,98 +23,118 @@ import com.jme.math.Vector3f;
 import com.jme.scene.Line;
 import com.jme.util.geom.BufferUtils;
 
-
 public class Curve3DNode extends ExtrusionNode {
 
-	//TODO: instead of updateExtrusion whenever a point changes, set a flag that updateExtrusion on updateGeometry.  this is more efficient because it prevents calling updateExtrusion multiple times per frame
-	
-	private Curve3D curve;
+    //TODO: instead of updateExtrusion whenever a point changes, set a flag that updateExtrusion on updateGeometry.  this is more efficient because it prevents calling updateExtrusion multiple times per frame
+    private Curve3D curve;
+    private Map<Vector3, IfVector3Changes> vectorWatches = new HashMap();
+    protected boolean curveChanged;
+    private boolean requiresCurveUpdate;
 
-	private Map<Vector3, IfVector3Changes> vectorWatches = new HashMap();
+    public Curve3DNode(Curve3D s) {
+        super(s);
+        this.curve = s;
+    }
 
-	protected boolean curveChanged;
+    @Override
+    protected void afterStopJme(JmeNode parent) {
+        for (IfVector3Changes v : vectorWatches.values()) {
+            getCurve().remove(v);
+        }
+        vectorWatches.clear();
 
-	public Curve3DNode(Curve3D s) {
-		super(s);
-		this.curve = s;
-	}
+        super.afterStopJme(parent);
+    }
 
-	@Override
-	protected void afterStopJme(JmeNode parent) {
-		for (IfVector3Changes v : vectorWatches.values()) {
-			getCurve().remove(v);
-		}
-		vectorWatches.clear();
+    @Override protected void startJme(JmeNode parent) {
+        super.startJme(parent);
 
-		super.afterStopJme(parent);				
-	}
-	
-	@Override protected void startJme(JmeNode parent) {
-		super.startJme(parent);
+        getCurve().add(new IfIntegerChanges(curve.getSegmentation(), curve.getNumEdges()) {
 
-		getCurve().add(new IfIntegerChanges(curve.getSegmentation(), curve.getNumEdges()) {
-			@Override public void afterValueChange(ObjectVar o, Integer previous, Integer next) {
-				requireUpdateGeometry();
-			}			
-		});
-		getCurve().add(new IfDoubleChanges(curve.getRadius()) {
-			@Override public void afterDoubleChanges(DoubleVar doubleVar,  Double previous, Double next) {
-				requireUpdateGeometry();
-			}			
-		});
-		getCurve().add(new IfCollectionChanges<Vector3>(curve.getPoints()) {
- 			@Override public synchronized void afterObjectsAdded(CollectionVar list, Vector3[] added) {				
-				for (Vector3 v : added) {
-					IfVector3Changes w = getCurve().add(new IfVector3Changes(v) {
-						@Override public void afterVectorChanged(Vector3 v, double dx, double dy, double dz) {
-							requireUpdateGeometry();
-						}			
-					});
-					vectorWatches.put(v, w);
-				}
-				requireUpdateGeometry();
-			}
+            @Override public void afterValueChange(ObjectVar o, Integer previous, Integer next) {
+                requireUpdateCurve();
+            }
+        });
+        getCurve().add(new IfDoubleChanges(curve.getRadius()) {
 
-			@Override public synchronized void afterObjectsRemoved(CollectionVar list, Vector3[] removed) {
-				for (Vector3 v : removed) {
-					IfVector3Changes w = vectorWatches.remove(v);
-					if (w != null) {
-						getCurve().remove(w);
-					}
-				}
-				requireUpdateGeometry();
-			}
-			
-		});
-		
+            @Override public void afterDoubleChanges(DoubleVar doubleVar, Double previous, Double next) {
+                requireUpdateCurve();
+            }
+        });
+        getCurve().add(new IfCollectionChanges<Vector3>(curve.getPoints()) {
 
-		
-	}
+            @Override public synchronized void afterObjectsAdded(CollectionVar list, Vector3[] added) {
+                for (Vector3 v : added) {
+                    IfVector3Changes w = getCurve().add(new IfVector3Changes(v) {
 
-	@Override public void updateGeometricState(float time, boolean initiator) {
-		updateExtrusion();
+                        @Override public void afterVectorChanged(Vector3 v, double dx, double dy, double dz) {
+                            requireUpdateCurve();
+                        }
+                    });
+                    vectorWatches.put(v, w);
+                }
+                requireUpdateCurve();
+            }
 
-		super.updateGeometricState(time, initiator);
-	}
+            @Override public synchronized void afterObjectsRemoved(CollectionVar list, Vector3[] removed) {
+                for (Vector3 v : removed) {
+                    IfVector3Changes w = vectorWatches.remove(v);
+                    if (w != null) {
+                        getCurve().remove(w);
+                    }
+                }
+                requireUpdateCurve();
+            }
+        });
 
-	@Override protected Line getCrossSection() {
-		Line l = new Line();
-		l.appendCircle(getCurve().getRadius().f(), 0, 0, getCurve().getNumEdges().get(), false);
-		return l;
-	}
+        updateExtrusion();
+    }
+
+    protected synchronized void requireUpdateCurve() {
+        if (!requiresCurveUpdate) {
+            requiresCurveUpdate = true;
+            requireUpdateGeometry();
+        }
+    }
+
+    @Override public void updateGeometricState(float time, boolean initiator) {
+        if (requiresCurveUpdate) {
+            updateExtrusion();
+            requiresCurveUpdate = false;
+        }
+
+        super.updateGeometricState(time, initiator);
+    }
+    int lastNumEdges = -1;
+    double lastRadius = -1;
+    private Line lastLine;
+
+    @Override protected Line getCrossSection() {
+        Line l = new Line();
+        int numEdges = getCurve().getNumEdges().i();
+        double radius = getCurve().getRadius().d();
+        if ((lastNumEdges == numEdges) && (lastRadius == radius)) {
+            return lastLine;
+        }
+        l.appendCircle(getCurve().getRadius().f(), 0, 0, getCurve().getNumEdges().get(), false);
+        lastRadius = radius;
+        lastNumEdges = numEdges;
+        lastLine = l;
+        return l;
+    }
 
     public static Line newArc(float radius, float angleStart, float angleEnd, float x, float y, int segments, boolean insideOut) {
-    	Line line = new Line();
-    	
+        Line line = new Line();
+
         int requiredFloats = segments * 2 * 3;
         FloatBuffer verts = BufferUtils.ensureLargeEnough(line.getVertexBuffer(),
-                requiredFloats);
+            requiredFloats);
         line.setVertexBuffer(verts);
         FloatBuffer normals = BufferUtils.ensureLargeEnough(line.getNormalBuffer(),
-                requiredFloats);
+            requiredFloats);
         line.setNormalBuffer(normals);
         float angle = angleStart;
-        float step = (angleEnd-angleStart) / segments;
+        float step = (angleEnd - angleStart) / segments;
         for (int i = 0; i < segments; i++) {
             float dx = FastMath.cos(insideOut ? -angle : angle) * radius;
             float dy = FastMath.sin(insideOut ? -angle : angle) * radius;
@@ -129,36 +149,39 @@ public class Curve3DNode extends ExtrusionNode {
 //        verts.put(radius + x).put(y).put(0);
 //        normals.put(radius).put(0).put(0);
         line.generateIndices();
-        
+
         return line;
     }
 
-	@Override protected List<Vector3f> getPath() {
-		if (curve.getPoints().size() == 0)
-			return null;
-		List<Vector3f> l = new LinkedList();
-		for (Vector3 v : curve.getPoints()) {
-			if (v!=null)
-				l.add(fMaths.toFloat(v));
-		}
-		return l;
-	}
+    @Override protected List<Vector3f> getPath() {
+        if (curve.getPoints().size() == 0) {
+            return null;
+        }
+        List<Vector3f> l = new LinkedList();
+        for (Vector3 v : curve.getPoints()) {
+            if (v != null) {
+                l.add(fMaths.toFloat(v));
+            }
+        }
+        return l;
+    }
 
+    public Curve3D getCurve() {
+        return curve;
+    }
 
-	public Curve3D getCurve() { return curve; }
+    @Override
+    protected boolean getIsClosed() {
+        return getCurve().getClosed().get();
+    }
 
-	@Override
-	protected boolean getIsClosed() {
-		return getCurve().getClosed().get();
-	}
+    @Override
+    protected int getSegments() {
+        return getCurve().getSegmentation().get();
+    }
 
-	@Override
-	protected int getSegments() {
-		return getCurve().getSegmentation().get();
-	}
-	
-	@Override
-	protected boolean isSpline() {
-		return getCurve().isSpline();
-	}
+    @Override
+    protected boolean isSpline() {
+        return getCurve().isSpline();
+    }
 }

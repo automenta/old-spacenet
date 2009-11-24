@@ -48,7 +48,7 @@ public class DemoNeuroph extends Box implements Starts {
         }
 
         @Override public Space newEdgeSpace(Object edge, Box pa, Box pb) {
-            final Line3D line = new Line3D(pa.getPosition(), pb.getPosition(), new DoubleVar(0.01), 2);
+            final Line3D line = new Line3D(pa.getPosition(), pb.getPosition(), new DoubleVar(0.01), 3);
             if (edge instanceof Connection) {
                 final Connection c = (Connection) edge;
                 final Weight weight = c.getWeight();
@@ -57,6 +57,8 @@ public class DemoNeuroph extends Box implements Starts {
                 //final Color co = new Color(1,1,1);
                 //box.color(co);
 
+                line.color(Color.newRandomHSB(0.5, 0.7));
+                
                 line.add(new Repeat() {
 
                     @Override public double repeat(double t, double dt) {
@@ -148,7 +150,6 @@ public class DemoNeuroph extends Box implements Starts {
                     double v = getNeuronScale((Neuron) n);
                     nextSize.set(v, v, v);
                     nBox.color(getNeuronColor((Neuron)n));
-
                 }
             }
         };

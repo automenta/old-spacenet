@@ -110,7 +110,7 @@ public class JmeNode extends Node implements Disposable {
 
 	final public Space space;
 
-	float absAngles[] = new float[3];
+	final float absAngles[] = new float[3];
 
 	final public JmeNodeBuilder model;
 
@@ -120,13 +120,10 @@ public class JmeNode extends Node implements Disposable {
 
     private Jme parentJme;
 
-	//temporary vectors
+	//temporary vectors TODO allocate as necessary
 	private final Vector3f vA = new Vector3f();
-
 	private final Vector3f vB = new Vector3f();
-
 	private final Vector3f vC = new Vector3f();
-
 	private final Vector3f vD = new Vector3f();
 
 	private IfChanges<Surface> whenSurfaceChanges;

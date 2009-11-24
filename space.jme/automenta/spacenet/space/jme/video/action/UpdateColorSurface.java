@@ -86,8 +86,8 @@ public class UpdateColorSurface implements Starts, Stops {
 
 	private static final Color defaultColor = new Color(0.5, 0.5, 0.5, 0.5);
 
-	private JmeNode spatial;
-	private ColorSurface colorSurface;
+	private final JmeNode spatial;
+	private final ColorSurface colorSurface;
 
 	private IfColorChanges watchingColor;
 
@@ -95,11 +95,11 @@ public class UpdateColorSurface implements Starts, Stops {
 
 	private IfDoubleChanges watchingOpacity;
 
-	final ColorRGBA defaultAmbient = new ColorRGBA(0.5f,0.5f,0.5f,0.5f);
+	final static ColorRGBA defaultAmbient = new ColorRGBA(0.5f,0.5f,0.5f,0.5f);
 	//	final ColorRGBA defaultSpecular = new ColorRGBA(0.2f,0.2f,0.2f,0.8f);
 	//	final ColorRGBA defaultEmissive = new ColorRGBA(0.2f,0.2f,0.2f,0.8f);
 
-	private float defaultShinineess = 0.5f;
+	static final float defaultShinineess = 0.5f;
 
 	private DoColorUpdate doColorUpdate;
 
@@ -113,6 +113,7 @@ public class UpdateColorSurface implements Starts, Stops {
 	private static Map<Space,UpdateColorSurface> spaceMap = new HashMap();
 
 	public UpdateColorSurface(JmeNode spatial, ColorSurface s) {
+        super();
 		this.spatial = spatial;
 		this.colorSurface = s;
 		this.jme = spatial.getJme();

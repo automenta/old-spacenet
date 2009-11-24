@@ -1,6 +1,7 @@
 package automenta.spacenet.space.geom3;
 
 import automenta.spacenet.Starts;
+import automenta.spacenet.space.Color;
 import automenta.spacenet.space.Surface;
 import automenta.spacenet.space.geom2.Rect;
 import automenta.spacenet.var.number.DoubleVar;
@@ -28,7 +29,7 @@ public class FlatLine3D extends Box implements Starts {
 	public FlatLine3D(Vector3 a, Vector3 b, DoubleVar width) {
 		super();
 		
-		this.rect = new Rect();
+		this.rect = new Rect(0,0,1,1);
 		this.a = a;
 		this.b = b;
 		this.width = width; 
@@ -61,17 +62,26 @@ public class FlatLine3D extends Box implements Starts {
 		center.add(getB());
 		center.multiply(0.5);
 
-		getRect().getPosition().set(center);
-		getRect().size(length, getWidth().d());
-
-		dir.set(getB().x(), getB().y(), getB().z());
-		dir.subtractLocal(getA().x(), getA().y(), getA().z());
-
-        fVector3 up = new fVector3(1,0,0);
+        add(new Box(new Vector3(0,0,0), new Vector3(0.1, 0.1, 0.1))).color(Color.Gray);
+        add(new Box(getA().subtractNew(center), new Vector3(0.1, 0.1, 0.1))).color(Color.GrayPlusPlus);
+        add(new Box(getB().subtractNew(center), new Vector3(0.1, 0.1, 0.1))).color(Color.GrayMinusMinus);
         
-		q.lookAt(dir, up);
-		q.toAngles( angles );
 
+		dir.set(getB().x() - getA().x(), getB().y() - getA().y(), getB().z() - getA().z());
+
+        //double xyRot = Math.atan2(dir.y, dir.x);
+        //double yzRot = Math.atan2(dir.z, dir.y);
+
+        double halfPi = Math.PI / 2.0;        
+
+        getPosition().set(center);
+		
+        rect.size(length, getWidth().d());
+
+        q.lookAt(new fVector3(1,0,0), dir);
+        q.toAngles(angles);
+        //rect.orient(0, xyRot, 0);
+        rect.orient(angles[0], angles[1], angles[2]);
 
         //System.out.println(dir + ": " + angles[0] + ", " + angles[1] + ", " + angles[2]);
 
@@ -86,8 +96,8 @@ public class FlatLine3D extends Box implements Starts {
 
 		//getRect().orient(halfPi + angles[0], angles[1], halfPi + angles[2]);
 
-        double halfPi = Math.PI / 2.0;
-        getRect().orient(halfPi + angles[0], angles[1], halfPi + angles[2]);
+        //double halfPi = Math.PI / 2.0;
+        //getRect().orient(halfPi + angles[0], angles[1], halfPi + angles[2]);
         
 	}
 

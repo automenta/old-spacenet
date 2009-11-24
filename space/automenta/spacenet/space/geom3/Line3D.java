@@ -1,6 +1,7 @@
 package automenta.spacenet.space.geom3;
 
 import automenta.spacenet.var.list.ListVar;
+import automenta.spacenet.var.number.BooleanVar;
 import automenta.spacenet.var.number.DoubleVar;
 import automenta.spacenet.var.vector.Vector3;
 
@@ -18,7 +19,8 @@ public class Line3D extends Curve3D {
 		this.a = a;
 		this.b = b;
 		getPoints().add(a);
-		getPoints().add(b);		
+		getPoints().add(b);
+        
 		this.radius = radius;
 		this.numEdges = numEdges;
 	}
@@ -36,5 +38,14 @@ public class Line3D extends Curve3D {
 	public double getLength() {
 		return getA().getDistance(getB());
 	}
-	
+
+    @Override
+    public BooleanVar getClosed() {
+        return super.getClosed();
+    }
+	public boolean isSpline() {
+		return false;
+	}
+
+
 }

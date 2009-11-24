@@ -12,10 +12,12 @@ import automenta.spacenet.space.geom2.TextLineRect;
 import automenta.spacenet.space.geom3.BevelRect;
 import automenta.spacenet.space.geom3.Box;
 import automenta.spacenet.space.geom3.Curve3D;
+import automenta.spacenet.space.geom3.FlatLine3D;
 import automenta.spacenet.space.geom3.MetaballBox;
 import automenta.spacenet.space.jme.geom.BevelRectNode;
 import automenta.spacenet.space.jme.geom.BoxNode;
 import automenta.spacenet.space.jme.geom.Curve3DNode;
+import automenta.spacenet.space.jme.geom.FlatLine3DNode;
 import automenta.spacenet.space.jme.geom.RectNode;
 import automenta.spacenet.space.jme.geom.scalar.MetaballNode;
 import automenta.spacenet.space.jme.geom.text.CharRectNode;
@@ -59,6 +61,9 @@ public class DefaultNodeBuilder implements JmeNodeBuilder {
 		if (s instanceof MetaballBox) {
 			return new MetaballNode((MetaballBox)s);
 		}
+//		else if (s instanceof FlatLine3D) {
+//			return new FlatLine3DNode((FlatLine3D)s);
+//		}
 		else if (s instanceof CharRect) {
 			return new CharRectNode((CharRect)s);
 		}
