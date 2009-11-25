@@ -8,7 +8,7 @@ import automenta.spacenet.plugin.neural.NeuralDiGraph;
 import automenta.spacenet.Starts;
 import automenta.spacenet.act.Repeat;
 import automenta.spacenet.os.DefaultJmeWindow;
-import automenta.spacenet.run.graph.AbstractDemoGraph.ForceDirectedControlWindow;
+import automenta.spacenet.run.graph.ForceDirectedControlWindow;
 import automenta.spacenet.space.Color;
 import automenta.spacenet.space.Space;
 import automenta.spacenet.space.geom3.Box;
